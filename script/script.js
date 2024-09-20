@@ -15,6 +15,7 @@ $(document).ready(function(){
                 $('.gnb > ul > li').off('mouseover mouseleave'); // 데스크탑 이벤트 제거
                 $('.gnb > ul > li').click(function(){
                     $(this).find('.sub').toggle();
+                    $(this).toggleClass('minus');
                 })
             }else{
                 $('.gnb > ul > li').off('click');
@@ -32,4 +33,5 @@ $(document).ready(function(){
     $(window).resize(function() {
         mobile();
     });
+    
 })

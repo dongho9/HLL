@@ -1,9 +1,10 @@
 @charset "utf-8";
-
-/* 공통서식 */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');/* 공통서식 */
 *{
     margin: 0 !important;
     padding: 0 !important;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 600;
 }
 a{
     text-decoration: none;
@@ -138,7 +139,8 @@ header{
 }
 .sub li a{
     display: block;
-    color: #000 !important;
+    font-size: 16px;
+    color: #666 !important;
 }
 h1{
     position: absolute;
@@ -174,10 +176,10 @@ video{
     z-index: 0; /* 비디오를 다른 콘텐츠 뒤에 배치 */
 }
 .txt{
-    color: #fff;
     display: flex; 
     padding-top: 160px !important;
     white-space: nowrap;
+    color: #fff;
 }
 .txt div{
     font-weight: bold;  
@@ -591,6 +593,28 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
     animation: opacity;
     animation-duration: 5s;
 }
+.introani{
+    animation: introani 1.5s forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out; /* 부드럽게 시작하고 끝나는 애니메이션 */
+}
+.gnbani{
+    animation: gnbani 1.5s forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out; /* 부드럽게 시작하고 끝나는 애니메이션 */
+}
+.gnb button span.gnbani::after{
+}
+.vidop{
+    animation: opacity 3s forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out; /* 부드럽게 시작하고 끝나는 애니메이션 */
+}
+.pathani{
+    animation: pathani 2s forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out; /* 부드럽게 시작하고 끝나는 애니메이션 */
+}
 @keyframes ani01{
     0%{
         opacity: 0;
@@ -617,7 +641,6 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
         opacity: 0;
         transform: translateY(70px);
     }
-
 }
 @keyframes opacity{
     0%{
@@ -628,8 +651,37 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
         visibility: visible;
     }
 }
-
+@keyframes introani{
+    0%{
+        color:#000;
+    }
+    100%{
+        color:#fff !important;
+    }
+}
+@keyframes pathani{
+    0%{
+        fill:#000;
+    }
+    100%{
+        fill:#fff !important;
+    }
+}
+@keyframes gnbani{
+    0%{
+        background-color:#000;
+    }
+    100%{
+        background-color:#fff !important;
+    }
+}
 @media screen and (max-width: 768px) {
+    .gnb > ul > li.minus a::after {
+        background-image: url(../img/ic_minus_16.png); /* 활성화된 아이콘 */
+    }
+    .minus{
+    
+    }
     .inner_header{
         justify-content: right;
         width: 100% !important;
@@ -677,6 +729,7 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
         position: relative;
         display: block;
         width: 100%;
+        transition: none !important;
     }
     .gnb > ul > li:nth-child(2n-1) a::after{
         display: none;
@@ -696,7 +749,7 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
         transform: translateY(-50%);
     }
     .gnb button{
-        top: 30px;
+        top: 24px;
         right: 20px;
         display: block;
         position: relative;
@@ -963,4 +1016,4 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
     .family{
         font-size: 14px !important;
     }
-    }
+    }   
