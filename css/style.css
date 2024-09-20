@@ -177,7 +177,7 @@ video{
 }
 .txt{
     display: flex; 
-    padding-top: 160px !important;
+    padding-top: 12% !important;
     white-space: nowrap;
     color: #fff;
 }
@@ -210,7 +210,7 @@ path{
     position: relative;
 }
 .txt02{
-    padding-top: 240px !important;
+    padding-top: 0% !important;
     box-sizing: border-box;
     max-width: 1200px; 
     margin: 0 auto !important;
@@ -249,7 +249,7 @@ path{
     justify-content: center;
 }
 .brand{
-    top: 110px;
+    /* top: 110px; */
     height: 720px;
     max-width: 1280px;
     box-sizing: border-box;
@@ -676,11 +676,23 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
     }
 }
 @media screen and (max-width: 768px) {
+    header{
+        height: 48px;
+    }
+    h1{
+        padding-top: 5px !important;
+    }
+    h1 a svg {
+        width: 60px !important;
+    }
     .gnb > ul > li.minus a::after {
         background-image: url(../img/ic_minus_16.png); /* 활성화된 아이콘 */
     }
     .minus{
     
+    }
+    .txt{
+        padding-top: 30% !important;
     }
     .inner_header{
         justify-content: right;
@@ -736,7 +748,7 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
     }
     .gnb > ul > li > a::after{
         background-image: url(../img/ic_plus_16.png);
-        background-color: transparent;
+        background-color: transparent !important;
         background-position: center;
         background-repeat: no-repeat;
         content: '';
@@ -749,7 +761,7 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
         transform: translateY(-50%);
     }
     .gnb button{
-        top: 24px;
+        top: 18px;
         right: 20px;
         display: block;
         position: relative;
@@ -777,8 +789,14 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
         margin-top: 60px !important;
         font-size: 32px !important;
     }
+    .intro02{
+        padding: 0 20px !important;
+    }
+    .intro02 .more_btn{
+        left: 50px !important;
+    }
     .txt02 {
-        padding-top: 270px !important;
+        padding-top: 0px !important;
     }
     .txt02 img{
         width: 160px;
@@ -794,25 +812,30 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
     }
     .more_btn {
         color: #000;
-        font-size: 14px;
-        height: 36px;
-        padding: 0 14px !important;
+        font-size: 12px;
+        height: 34px;
+        padding: 0 6px 0 10px!important;
         display: inline-block;
         border: 1px solid #000;
         text-align: center;
         box-sizing: border-box;
-        line-height: 36px;
+        line-height: 34px;
         position: relative;
         margin-top: 20px !important;
     }
+    .more_btn span {
+        font-weight: normal;
+    }
     .more_btn span::after {
-        margin-right: 14px;
+        margin-right: 12px;
+        width: 16px;
+        height: 16px;
     }
     .intro {
         padding: 0 20px !important;
     }
     .txt_right {
-        font-size: 14px;
+        font-size: 12px;
         z-index: 10;
         letter-spacing: 0.5px;
         right: 0;
@@ -825,10 +848,11 @@ address div span:first-child::after, address div span:nth-of-type(3)::after{
     .brand{
         width: 100% !important;
         padding: 0 !important;
-        top: 70px !important;
+        /* top: 70px !important; */
     }
     .brand_txt{
         z-index: 2;
+        bottom: 15% !important;
     }
     .brand_txt img{
         height: 38px !important;
